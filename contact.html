@@ -1,1 +1,271 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Avery DePodesta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #faf8f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            font-weight: 600;
+            color: #1f3047;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c58f9b;
+        }
+
+        .nav-links a.active {
+            color: #c58f9b;
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            padding: 75px 20px 35px;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #1f3047;
+            margin-bottom: 12px;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 850px;
+            margin: 20px auto 80px;
+            padding: 0 25px;
+        }
+
+        .contact-card {
+            background-color: #ffffff;
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        .contact-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #1f3047;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro {
+            color: #666;
+            font-size: 15px;
+            max-width: 600px;
+            margin: 0 auto 35px;
+        }
+
+        /* Contact Items */
+        .contact-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .contact-item {
+            background-color: #faf8f6;
+            padding: 25px 15px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .contact-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: #1f3047;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 12px;
+        }
+
+        .contact-item a {
+            color: #b77e8c;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item a:hover {
+            color: #1f3047;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #1f3047;
+            color: #ffffff;
+            font-size: 13px;
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 650px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-header {
+                padding-top: 55px;
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+            }
+
+            .contact-card {
+                padding: 30px 20px;
+            }
+
+            .contact-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">Avery DePodesta</a>
+
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Get in Touch</h1>
+        <p>I'd love to connect and hear from you!</p>
+    </header>
+
+    <!-- Contact Content -->
+    <main class="contact-container">
+
+        <section class="contact-card">
+
+            <h2>Let's Connect</h2>
+
+            <p class="contact-intro">
+                I'm always interested in connecting with professionals,
+                exploring new opportunities, and learning from others
+                in the data analytics field. Feel free to reach out!
+            </p>
+
+            <div class="contact-items">
+
+                <!-- Email -->
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>Have a question or want to get in touch?</p>
+                    <a href="mailto:averydepodesta@gmail.com">
+                        averydepodesta@gmail.com
+                    </a>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me professionally.</p>
+                    <a href="https://www.linkedin.com/in/averydepodesta/" target="_blank">
+                        Visit My LinkedIn →
+                    </a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <p>Explore my projects and work.</p>
+                    <a href="https://github.com/averydepo" target="_blank">
+                        View My GitHub →
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Avery DePodesta. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
