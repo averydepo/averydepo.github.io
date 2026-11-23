@@ -1,1 +1,227 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Avery DePodesta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #faf8f6;
+            color: #333333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            color: #17243a;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #bd8798;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: #17243a;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            color: #666666;
+        }
+
+        .skills-container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 20px 30px 80px;
+        }
+
+        .skill-section {
+            margin-bottom: 45px;
+        }
+
+        .skill-section h2 {
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 16px;
+        }
+
+        .skill-card {
+            background: #ffffff;
+            border: 1px solid #eee5e5;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+        }
+
+        .soft-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .soft-skill {
+            background-color: #f0e2e6;
+            color: #17243a;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #17243a;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .nav-links {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Avery DePodesta</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Skills & Expertise</h1>
+        <p>A combination of technical knowledge, analytical thinking, and collaboration.</p>
+    </header>
+
+    <main class="skills-container">
+
+        <section class="skill-section">
+            <h2>Data Analytics & Visualization</h2>
+            <div class="skill-grid">
+                <div class="skill-card">SQL</div>
+                <div class="skill-card">R</div>
+                <div class="skill-card">Power BI</div>
+                <div class="skill-card">Tableau</div>
+                <div class="skill-card">Microsoft Excel</div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h2>Business & Enterprise Systems</h2>
+            <div class="skill-grid">
+                <div class="skill-card">ServiceNow</div>
+                <div class="skill-card">Workday</div>
+                <div class="skill-card">QuickBooks</div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h2>Programming & Development</h2>
+            <div class="skill-grid">
+                <div class="skill-card">Java</div>
+                <div class="skill-card">CSS</div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h2>Productivity & Tools</h2>
+            <div class="skill-grid">
+                <div class="skill-card">Microsoft Word</div>
+                <div class="skill-card">Microsoft PowerPoint</div>
+                <div class="skill-card">Microsoft Outlook</div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h2>Professional & Interpersonal Skills</h2>
+            <div class="soft-skills">
+                <span class="soft-skill">Communication</span>
+                <span class="soft-skill">Teamwork & Collaboration</span>
+                <span class="soft-skill">Problem-Solving</span>
+                <span class="soft-skill">Critical Thinking</span>
+                <span class="soft-skill">Adaptability</span>
+                <span class="soft-skill">Time Management</span>
+                <span class="soft-skill">Organization</span>
+                <span class="soft-skill">Attention to Detail</span>
+                <span class="soft-skill">Cross-Functional Collaboration</span>
+                <span class="soft-skill">Process Improvement</span>
+                <span class="soft-skill">Analytical Thinking</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Avery DePodesta. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
