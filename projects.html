@@ -19,6 +19,7 @@
             font-family: 'Quicksand', sans-serif;
             background-color: #faf8f6;
             color: #333333;
+            line-height: 1.7;
         }
 
         nav {
@@ -130,17 +131,42 @@
             color: #555555;
         }
 
-        .screenshot-grid {
+        /* Dashboard Gallery - matching index.html */
+
+        .dashboard-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-top: 20px;
+            gap: 15px;
+            margin: 25px 0;
         }
 
-        .screenshot-grid img {
+        .dashboard-image {
+            display: block;
+            background: #ffffff;
+            border: 1px solid #eae5e3;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .dashboard-image:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(23, 43, 77, 0.12);
+        }
+
+        .dashboard-image img {
             width: 100%;
-            border-radius: 10px;
-            border: 1px solid #eeeeee;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .dashboard-image p {
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #17243a;
+            margin: 0;
         }
 
         .project-links {
@@ -173,45 +199,6 @@
             font-size: 14px;
         }
 
-        
-.screenshot-grid img {
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.screenshot-grid img:hover {
-    transform: scale(1.02);
-}
-
-#lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    cursor: pointer;
-}
-
-#lightbox img {
-    max-width: 95%;
-    max-height: 90vh;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-.close-lightbox {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-}
-
-
         @media (max-width: 650px) {
             nav {
                 flex-direction: column;
@@ -231,8 +218,10 @@
             .project-card {
                 padding: 22px;
             }
+        }
 
-            .screenshot-grid {
+        @media (max-width: 500px) {
+            .dashboard-gallery {
                 grid-template-columns: 1fr;
             }
         }
@@ -301,60 +290,58 @@
 
             <h3>Dashboard Screenshots</h3>
 
-            
-<div class="dashboard-gallery">
+            <div class="dashboard-gallery">
 
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Landing%20Page.png" 
-                target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Landing%20Page.png"
-                     alt="Dashboard landing page">
-                <p>Landing Page</p>
-            </a>
+                <a class="dashboard-image"
+                   href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Landing%20Page.png"
+                   target="_blank">
+                    <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Landing%20Page.png"
+                         alt="Dashboard landing page">
+                    <p>Landing Page</p>
+                </a>
 
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Historical%20Statistics.png"
-               target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Historical%20Statistics.png"
-                     alt="Historical statistics">
-                <p>Historical Statistics</p>
-            </a>
+                <a class="dashboard-image"
+                   href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Historical%20Statistics.png"
+                   target="_blank">
+                    <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Historical%20Statistics.png"
+                         alt="Historical statistics">
+                    <p>Historical Statistics</p>
+                </a>
 
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Season%20Overview.png"
-               target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Season%20Overview.png"
-                     alt="Season overview">
-                <p>Season Overview</p>
-            </a>
+                <a class="dashboard-image"
+                   href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Season%20Overview.png"
+                   target="_blank">
+                    <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Season%20Overview.png"
+                         alt="Season overview">
+                    <p>Season Overview</p>
+                </a>
 
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Player%20Stats.png" 
-                target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Player%20Stats.png"
-                     alt="Player statistics">
-                <p>Player Statistics</p>
-            </a>
+                <a class="dashboard-image"
+                   href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Player%20Stats.png"
+                   target="_blank">
+                    <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Player%20Stats.png"
+                         alt="Player statistics">
+                    <p>Player Statistics</p>
+                </a>
 
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Next%20Game%20Preview.png" 
-                target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Next%20Game%20Preview.png"
-                     alt="Next game preview">
-                <p>Next Game Preview</p>
-            </a>
+                <a class="dashboard-image"
+                   href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Next%20Game%20Preview.png"
+                   target="_blank">
+                    <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Next%20Game%20Preview.png"
+                         alt="Next game preview">
+                    <p>Next Game Preview</p>
+                </a>
 
-        </div>
+            </div>
 
-    
+            <p>
+                <strong>Technologies:</strong> Power BI, Power Query,
+                CollegeFootballData API
+            </p>
 
-</div>
-
-<div id="lightbox" onclick="closeLightbox()">
-    <span class="close-lightbox">&times;</span>
-    <img id="lightbox-image" src="" alt="Expanded dashboard screenshot">
-</div>
-
+            <p>
+                <strong>Seasons Covered:</strong> 2015–2026
+            </p>
 
             <div class="project-links">
 
@@ -379,17 +366,5 @@
         <p>© 2026 Avery DePodesta. All rights reserved.</p>
     </footer>
 
-<script>
-    function openLightbox(imageSrc) {
-        document.getElementById("lightbox-image").src = imageSrc;
-        document.getElementById("lightbox").style.display = "flex";
-    }
-
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
-</script>
-
 </body>
 </html>
-
