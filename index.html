@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --navy: #172B4D;
@@ -26,10 +27,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
@@ -53,16 +50,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
         .logo {
-            font-size: 19px;
-            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            font-size: 21px;
+            font-weight: 600;
             color: var(--navy);
-            letter-spacing: -0.5px;
         }
 
         .nav-links {
@@ -73,7 +67,7 @@
         .nav-links a {
             color: var(--charcoal);
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.2s;
         }
 
@@ -81,7 +75,7 @@
             color: var(--pink-dark);
         }
 
-        /* Hero */
+        /* Hero Section */
 
         .hero {
             background: var(--navy);
@@ -111,11 +105,21 @@
             margin-bottom: 22px;
         }
 
+        .hero h1 span {
+            color: var(--pink);
+        }
+
         .hero p {
-            max-width: 650px;
+            max-width: 680px;
             font-size: 17px;
             color: #D9DFE8;
             margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .hero-button {
@@ -133,12 +137,22 @@
             background: #F0D5DC;
         }
 
-        /* General sections */
+        .hero-button.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid var(--pink);
+        }
+
+        .hero-button.secondary:hover {
+            background: rgba(232, 191, 200, 0.12);
+        }
+
+        /* General Sections */
 
         .container {
             max-width: 1050px;
             margin: auto;
-            padding: 85px 25px;
+            padding: 80px 25px;
         }
 
         .section-label {
@@ -155,7 +169,7 @@
             color: var(--navy);
             font-size: 35px;
             font-weight: 500;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .section-description {
@@ -164,91 +178,19 @@
             font-size: 15px;
         }
 
-        /* About */
+        /* About Section */
 
         .about {
             background: var(--white);
         }
 
         .about-content {
-            max-width: 760px;
+            max-width: 800px;
         }
 
-        /* Skills */
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 30px;
-        }
-
-        .skill {
-            background: #F5E8EB;
-            color: var(--navy);
-            padding: 9px 16px;
-            border-radius: 4px;
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        /* Projects */
-
-        .projects {
-            background: var(--background);
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 35px;
-        }
-
-        .project-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 7px;
-            overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(23, 43, 77, 0.08);
-        }
-
-        .project-accent {
-            height: 7px;
-            background: var(--pink);
-        }
-
-        .project-content {
-            padding: 28px;
-        }
-
-        .project-tag {
-            color: var(--pink-dark);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 11px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .project-card h3 {
-            color: var(--navy);
-            font-size: 19px;
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 22px;
-        }
-
-        .project-link {
+        .about-link {
+            display: inline-block;
+            margin-top: 25px;
             color: var(--navy);
             font-size: 13px;
             font-weight: 700;
@@ -256,7 +198,49 @@
             padding-bottom: 4px;
         }
 
-        /* Contact */
+        .about-link:hover {
+            color: var(--pink-dark);
+        }
+
+        /* Areas of Interest */
+
+        .interests {
+            background: var(--background);
+        }
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .interest-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            padding: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(23, 43, 77, 0.07);
+        }
+
+        .interest-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .interest-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Contact Section */
 
         .contact {
             background: var(--navy);
@@ -275,23 +259,7 @@
         .contact p {
             color: #D9DFE8;
             margin-bottom: 25px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
-
-        .contact-links a {
-            color: var(--pink);
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        .contact-links a:hover {
-            color: var(--white);
+            font-size: 15px;
         }
 
         /* Footer */
@@ -304,9 +272,9 @@
             font-size: 12px;
         }
 
-        /* Mobile */
+        /* Mobile Layout */
 
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
             nav {
                 padding: 18px 5%;
                 flex-direction: column;
@@ -315,6 +283,8 @@
 
             .nav-links {
                 gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .hero {
@@ -328,363 +298,199 @@
             h2 {
                 font-size: 30px;
             }
+
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
-        
-.skill-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.skill-toggle {
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill-toggle:hover {
-    background: #E8BFC8;
-}
-
-.skill-details {
-    display: none;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 12px;
-    background: #FFFFFF;
-    border: 1px solid #EAE5E3;
-    border-radius: 6px;
-}
-
-.skill-details.active {
-    display: flex;
-}
-
-#office-arrow {
-    font-size: 16px;
-}
-
-/* Project dashboard previews */
-
-.project-preview {
-    width: 100%;
-    display: block;
-    border-radius: 5px;
-    margin: 20px 0;
-    border: 1px solid var(--border);
-}
-
-.project-preview img {
-    width: 100%;
-    display: block;
-    height: auto;
-}
-
-.dashboard-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin: 25px 0;
-}
-
-.dashboard-image {
-    display: block;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.dashboard-image:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(23, 43, 77, 0.12);
-}
-
-.dashboard-image img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    display: block;
-}
-
-.dashboard-image p {
-    padding: 10px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--navy);
-    margin: 0;
-}
-
-@media (max-width: 500px) {
-    .dashboard-gallery {
-        grid-template-columns: 1fr;
-    }
-}
 
     </style>
 </head>
 
 <body>
 
-    <nav>
-    <a href="index.html" class="logo">Avery DePodesta</a>
+    <!-- Navigation -->
 
-    <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
+    <nav>
+        <a href="index.html" class="logo">Avery DePodesta</a>
+
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
 
     <header class="hero">
         <div class="hero-content">
-            <div class="eyebrow">Data Analytics & Business Intelligence</div>
 
-            <h1>Turning Data Into Meaningful Insights.</h1>
+            <div class="eyebrow">
+                Data Analytics & Business Intelligence
+            </div>
+
+            <h1>
+                Hi, I'm <span>Avery DePodesta.</span>
+            </h1>
 
             <p>
-                Information Systems graduate from The Ohio State University
-                with an interest in data analytics, business intelligence,
-                and using data to support informed decision-making.
+                I'm an Information Systems graduate with a passion for
+                transforming complex data into meaningful insights.
+                I'm particularly interested in data analytics,
+                business intelligence, and how data can be used to
+                support better decision-making and improve outcomes.
             </p>
 
-            <a href="projects.html" class="hero-button">Explore My Projects</a>
+            <div class="hero-buttons">
+
+                <a href="projects.html" class="hero-button">
+                    Explore My Projects →
+                </a>
+
+                <a href="resume/Avery_DePodesta_Resume.pdf"
+                   class="hero-button secondary"
+                   target="_blank">
+                    View My Resume →
+                </a>
+
+            </div>
+
         </div>
     </header>
 
-    <section class="about" id="about">
+
+    <!-- About Section -->
+
+    <section class="about">
         <div class="container">
+
             <div class="about-content">
-                <div class="section-label">A Little About Me</div>
+
+                <div class="section-label">
+                    A Little About Me
+                </div>
 
                 <h2>About Me</h2>
 
                 <p class="section-description">
-                    I am a recent graduate of The Ohio State University
-                    Fisher College of Business, where I earned my bachelor's
-                    degree in Business Administration with a specialization
-                    in Information Systems.
+                    I'm a graduate of The Ohio State University
+                    Fisher College of Business, where I earned my
+                    bachelor's degree in Business Administration
+                    with a specialization in Information Systems.
 
                     <br><br>
 
-                    I enjoy working with data to uncover trends, solve
-                    problems, and communicate insights through meaningful
-                    visualizations. I am particularly interested in
-                    healthcare analytics and the role data can play in
-                    improving operational performance and patient outcomes.
+                    Through my academic and professional experiences,
+                    I've developed an interest in using data to
+                    uncover trends, solve problems, and communicate
+                    meaningful insights. I'm especially interested
+                    in healthcare analytics and the role data can
+                    play in improving operational performance
+                    and patient outcomes.
                 </p>
+
+                <a href="about.html" class="about-link">
+                    Learn More About Me →
+                </a>
+
             </div>
+
         </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
-            <div class="section-label">Technical Toolkit</div>
 
-            <h2>Skills & Technologies</h2>
+    <!-- Areas of Interest -->
+
+    <section class="interests">
+        <div class="container">
+
+            <div class="section-label">
+                Areas of Interest
+            </div>
+
+            <h2>What I'm Interested In</h2>
 
             <p class="section-description">
-                Tools and technologies I have experience using across
-                academic, professional, and independent projects.
+                I'm interested in exploring how data can be used
+                to identify patterns, solve problems, and support
+                meaningful decisions across different industries.
             </p>
 
-            
-<div class="skills">
+            <div class="interest-grid">
 
-    <div class="skill-group">
-        <button class="skill skill-toggle" onclick="toggleOffice()">
-            Microsoft Office
-            <span id="office-arrow">⌄</span>
-        </button>
+                <div class="interest-card">
+                    <h3>Data Analytics</h3>
 
-        <div class="skill-details" id="office-apps">
-            <span class="skill">Excel</span>
-            <span class="skill">Word</span>
-            <span class="skill">PowerPoint</span>
-            <span class="skill">Outlook</span>
-            <span class="skill">Teams</span>
-            <span class="skill">Power BI</span>
-            <span class="skill">Access</span>
-            <span class="skill">Visio</span>
-            <span class="skill">VBA</span>
-            <span class="skill">Power Automate</span>
-        </div>
-    </div>
+                    <p>
+                        Exploring datasets, identifying trends,
+                        and translating information into
+                        actionable insights.
+                    </p>
+                </div>
 
-    <span class="skill">Workday</span>
-    <span class="skill">Python</span>
-    <span class="skill">SQL</span>
-    <span class="skill">R</span>
-    <span class="skill">Tableau</span>
-    <span class="skill">Data Analysis</span>
-    <span class="skill">Data Visualization</span>
-    <span class="skill">Power Query</span>
-    <span class="skill">API Integration</span>
-    <span class="skill">QuickBooks Online</span>
-    <span class="skill">QuickBooks Desktop</span>
-    <span class="skill">ServiceNow</span>
-    <span class="skill">Java</span>
+                <div class="interest-card">
+                    <h3>Business Intelligence</h3>
 
-</div>
+                    <p>
+                        Using reporting and data visualization
+                        to make complex information easier
+                        to understand and interpret.
+                    </p>
+                </div>
+
+                <div class="interest-card">
+                    <h3>Healthcare Analytics</h3>
+
+                    <p>
+                        Exploring how data can improve
+                        operational performance, decision-making,
+                        and patient outcomes.
+                    </p>
+                </div>
+
+            </div>
 
         </div>
     </section>
 
-    <section class="projects" id="projects">
+
+    <!-- Contact Section -->
+
+    <section class="contact">
         <div class="container">
-            <div class="section-label">Selected Work</div>
 
-            <h2>Projects</h2>
-
-            <p class="section-description">
-                A collection of projects demonstrating my interests
-                and experience in data analytics, business intelligence,
-                and data visualization.
-                
-            </p>
-
-            
-<div class="project-card">
-    <div class="project-accent"></div>
-
-    <div class="project-content">
-
-        <div class="project-tag">Power BI · Sports Analytics</div>
-
-        <h3>Ohio State Football Analytics</h3>
-
-        <p>
-            An interactive Power BI dashboard analyzing Ohio State
-            football performance, historical statistics, and trends
-            across the 2015–2026 seasons using the CollegeFootballData API.
-        </p>
-
-
-        <h4 style="color: var(--navy); margin-top: 25px;">
-            Explore the Dashboard
-        </h4>
-
-        <div class="dashboard-gallery">
-
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Landing%20Page.png" 
-                target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Landing%20Page.png"
-                     alt="Dashboard landing page">
-                <p>Landing Page</p>
-            </a>
-
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Historical%20Statistics.png"
-               target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Historical%20Statistics.png"
-                     alt="Historical statistics">
-                <p>Historical Statistics</p>
-            </a>
-
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Season%20Overview.png"
-               target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/OSU%20Season%20Overview.png"
-                     alt="Season overview">
-                <p>Season Overview</p>
-            </a>
-
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Player%20Stats.png" 
-                target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Player%20Stats.png"
-                     alt="Player statistics">
-                <p>Player Statistics</p>
-            </a>
-
-            <a class="dashboard-image"
-               href="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Next%20Game%20Preview.png" 
-                target="_blank">
-                <img src="https://raw.githubusercontent.com/averydepo/ohio-state-football-analytics/main/screenshots/Next%20Game%20Preview.png"
-                     alt="Next game preview">
-                <p>Next Game Preview</p>
-            </a>
-
-        </div>
-
-        <p>
-            <strong>Technologies:</strong> Power BI, Power Query,
-            CollegeFootballData API
-        </p>
-
-        <p>
-            <strong>Seasons Covered:</strong> 2015–2026
-        </p>
-
-        <a class="project-link"
-           href="https://github.com/averydepo/ohio-state-football-analytics"
-           target="_blank">
-            View Project on GitHub →
-        </a>
-        <br>
-<a class="project-link"
-   href="https://github.com/averydepo/ohio-state-football-analytics/raw/refs/heads/main/dashboard/Ohio State Football Analytics Dashboard.pbix">
-    Download Power BI Report →
-</a>
-
-
-    </div>
-</div>
-
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-label">Get In Touch</div>
+            <div class="section-label">
+                Get In Touch
+            </div>
 
             <h2>Let's Connect</h2>
 
             <p>
-                Interested in connecting or learning more about my work?
-                Feel free to reach out.
+                Interested in connecting or learning more about
+                my background and work? I'd love to hear from you.
             </p>
 
-            <div class="contact-links">
-                <a href="mailto:avery.depodesta@gmail.com">Email</a>
+            <a href="contact.html" class="hero-button">
+                Contact Me →
+            </a>
 
-                <a href="https://www.linkedin.com/in/averydepodesta/">
-                    LinkedIn
-                </a>
-
-                <a href="https://github.com/averydepo">
-                    GitHub
-                </a>
-            </div>
         </div>
     </section>
+
+
+    <!-- Footer -->
 
     <footer>
         © 2026 Avery DePodesta | Data Analytics Portfolio
     </footer>
-
-
-<script>
-function toggleOffice() {
-    const apps = document.getElementById("office-apps");
-    const arrow = document.getElementById("office-arrow");
-
-    apps.classList.toggle("active");
-
-    if (apps.classList.contains("active")) {
-        arrow.textContent = "⌃";
-    } else {
-        arrow.textContent = "⌄";
-    }
-}
-</script>
-
 
 </body>
 </html>
