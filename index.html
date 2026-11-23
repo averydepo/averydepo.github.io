@@ -368,6 +368,64 @@
     font-size: 16px;
 }
 
+/* Project dashboard previews */
+
+.project-preview {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    margin: 20px 0;
+    border: 1px solid var(--border);
+}
+
+.project-preview img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.dashboard-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.dashboard-image {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-image:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(23, 43, 77, 0.12);
+}
+
+.dashboard-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.dashboard-image p {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+    .dashboard-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
     </style>
 </head>
 
@@ -490,31 +548,93 @@
                 and data visualization.
             </p>
 
-            <div class="project-grid">
+            
+<div class="project-card">
+    <div class="project-accent"></div>
 
-                <div class="project-card">
-                    <div class="project-accent"></div>
+    <div class="project-content">
 
-                    <div class="project-content">
-                        <div class="project-tag">Power BI · Sports Analytics</div>
+        <div class="project-tag">Power BI · Sports Analytics</div>
 
-                        <h3>Ohio State Football Analytics</h3>
+        <h3>Ohio State Football Analytics</h3>
 
-                        <p>
-                            An interactive Power BI dashboard analyzing
-                            Ohio State football performance, historical
-                            statistics, and trends across the 2015–2026
-                            seasons using the CollegeFootballData API.
-                        </p>
+        <p>
+            An interactive Power BI dashboard analyzing Ohio State
+            football performance, historical statistics, and trends
+            across the 2015–2026 seasons using the CollegeFootballData API.
+        </p>
 
-                        <a class="project-link"
-                           href="https://github.com/averydepo/ohio-state-football-analytics">
-                            View Project →
-                        </a>
-                    </div>
-                </div>
+        <a class="project-preview"
+           href="screenshots/OSU%20Analytics%20Dashboard%20Overview.png"
+           target="_blank">
+            <img
+                src="screenshots/OSU%20Analytics%20Dashboard%20Overview.png"
+                alt="Ohio State Football Analytics dashboard overview">
+        </a>
 
-            </div>
+        <h4 style="color: var(--navy); margin-top: 25px;">
+            Explore the Dashboard
+        </h4>
+
+        <div class="dashboard-gallery">
+
+            <a class="dashboard-image"
+               href="screenshots/Landing%20Page.png" target="_blank">
+                <img src="screenshots/Landing%20Page.png"
+                     alt="Dashboard landing page">
+                <p>Landing Page</p>
+            </a>
+
+            <a class="dashboard-image"
+               href="screenshots/Next%20Game%20Preview.png" target="_blank">
+                <img src="screenshots/Next%20Game%20Preview.png"
+                     alt="Next game preview">
+                <p>Next Game Preview</p>
+            </a>
+
+            <a class="dashboard-image"
+               href="screenshots/OSU%20Historical%20Statistics.png"
+               target="_blank">
+                <img src="screenshots/OSU%20Historical%20Statistics.png"
+                     alt="Historical statistics">
+                <p>Historical Statistics</p>
+            </a>
+
+            <a class="dashboard-image"
+               href="screenshots/OSU%20Season%20Overview.png"
+               target="_blank">
+                <img src="screenshots/OSU%20Season%20Overview.png"
+                     alt="Season overview">
+                <p>Season Overview</p>
+            </a>
+
+            <a class="dashboard-image"
+               href="screenshots/Player%20Stats.png" target="_blank">
+                <img src="screenshots/Player%20Stats.png"
+                     alt="Player statistics">
+                <p>Player Statistics</p>
+            </a>
+
+        </div>
+
+        <p>
+            <strong>Technologies:</strong> Power BI, Power Query,
+            CollegeFootballData API
+        </p>
+
+        <p>
+            <strong>Seasons Covered:</strong> 2015–2026
+        </p>
+
+        <a class="project-link"
+           href="https://github.com/YOUR-USERNAME/ohio-state-football-analytics"
+           target="_blank">
+            View Project on GitHub →
+        </a>
+
+    </div>
+</div>
+
         </div>
     </section>
 
