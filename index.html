@@ -330,6 +330,44 @@
                 font-size: 30px;
             }
         }
+        
+.skill-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-toggle {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-toggle:hover {
+    background: #E8BFC8;
+}
+
+.skill-details {
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+    background: #FFFFFF;
+    border: 1px solid #EAE5E3;
+    border-radius: 6px;
+}
+
+.skill-details.active {
+    display: flex;
+}
+
+#office-arrow {
+    font-size: 16px;
+}
+
     </style>
 </head>
 
@@ -508,6 +546,19 @@
     <footer>
         © 2026 Avery DePodesta | Data Analytics Portfolio
     </footer>
+
+function toggleOffice() {
+    const apps = document.getElementById("office-apps");
+    const arrow = document.getElementById("office-arrow");
+
+    apps.classList.toggle("active");
+
+    if (apps.classList.contains("active")) {
+        arrow.textContent = "⌃";
+    } else {
+        arrow.textContent = "⌄";
+    }
+}
 
 </body>
 </html>
